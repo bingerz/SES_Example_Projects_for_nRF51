@@ -1,0 +1,142 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="ble_app_hids_mouse" target="8" version="2">
+  <project Name="ble_app_hids_mouse">
+    <configuration
+      Name="Common"
+      Placement="Flash"
+      Target="nRF51822_xxAA"
+      arm_architecture="v6M"
+      arm_core_type="Cortex-M0"
+      arm_endian="Little"
+      arm_fp_abi="None"
+      arm_fpu_type="None"
+      arm_interwork="No"
+      arm_linker_heap_size="1024"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="1024"
+      arm_simulator_memory_simulation_parameter="ROM;0x00000000;0x00040000;RAM;0x20000000;0x00004000"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_device_name="nRF51822_xxAA"
+      arm_target_interface_type="SWD"
+      c_preprocessor_definitions="S130;NRF51;NRF51422;BOARD_PCA10028;BLE_STACK_SUPPORT_REQD;NRF_SD_BLE_API_VERSION=2;SOFTDEVICE_PRESENT;SWI_DISABLE0;NO_VTOR_CONFIG"
+      c_user_include_directories="$(ProjectDir);$(ProjectDir)/CMSIS_4/CMSIS/Include;$(ProjectDir)/nRF/CMSIS/Device/Include;$(SDK)/components;$(SDK)/components/ble/ble_advertising;$(SDK)/components/ble/ble_dtm;$(SDK)/components/ble/ble_racp;$(SDK)/components/ble/ble_services/ble_ancs_c;$(SDK)/components/ble/ble_services/ble_ans_c;$(SDK)/components/ble/ble_services/ble_bas;$(SDK)/components/ble/ble_services/ble_bas_c;$(SDK)/components/ble/ble_services/ble_cscs;$(SDK)/components/ble/ble_services/ble_cts_c;$(SDK)/components/ble/ble_services/ble_dfu;$(SDK)/components/ble/ble_services/ble_dis;$(SDK)/components/ble/ble_services/ble_gls;$(SDK)/components/ble/ble_services/ble_hids;$(SDK)/components/ble/ble_services/ble_hrs;$(SDK)/components/ble/ble_services/ble_hrs_c;$(SDK)/components/ble/ble_services/ble_hts;$(SDK)/components/ble/ble_services/ble_ias;$(SDK)/components/ble/ble_services/ble_ias_c;$(SDK)/components/ble/ble_services/ble_lbs;$(SDK)/components/ble/ble_services/ble_lbs_c;$(SDK)/components/ble/ble_services/ble_lls;$(SDK)/components/ble/ble_services/ble_nus;$(SDK)/components/ble/ble_services/ble_nus_c;$(SDK)/components/ble/ble_services/ble_rscs;$(SDK)/components/ble/ble_services/ble_rscs_c;$(SDK)/components/ble/ble_services/ble_tps;$(SDK)/components/ble/common;$(SDK)/components/ble/nrf_ble_qwr;$(SDK)/components/ble/peer_manager;$(SDK)/components/boards;$(SDK)/components/device;$(SDK)/components/drivers_nrf/adc;$(SDK)/components/drivers_nrf/clock;$(SDK)/components/drivers_nrf/common;$(SDK)/components/drivers_nrf/comp;$(SDK)/components/drivers_nrf/delay;$(SDK)/components/drivers_nrf/gpiote;$(SDK)/components/drivers_nrf/hal;$(SDK)/components/drivers_nrf/i2s;$(SDK)/components/drivers_nrf/lpcomp;$(SDK)/components/drivers_nrf/pdm;$(SDK)/components/drivers_nrf/power;$(SDK)/components/drivers_nrf/ppi;$(SDK)/components/drivers_nrf/pwm;$(SDK)/components/drivers_nrf/qdec;$(SDK)/components/drivers_nrf/rng;$(SDK)/components/drivers_nrf/rtc;$(SDK)/components/drivers_nrf/saadc;$(SDK)/components/drivers_nrf/spi_master;$(SDK)/components/drivers_nrf/spi_slave;$(SDK)/components/drivers_nrf/swi;$(SDK)/components/drivers_nrf/timer;$(SDK)/components/drivers_nrf/twi_master;$(SDK)/components/drivers_nrf/twis_slave;$(SDK)/components/drivers_nrf/uart;$(SDK)/components/drivers_nrf/usbd;$(SDK)/components/drivers_nrf/wdt;$(SDK)/components/libraries/bsp;$(SDK)/components/libraries/button;$(SDK)/components/libraries/crc16;$(SDK)/components/libraries/crc32;$(SDK)/components/libraries/csense;$(SDK)/components/libraries/csense_drv;$(SDK)/components/libraries/experimental_section_vars;$(SDK)/components/libraries/fds;$(SDK)/components/libraries/fstorage;$(SDK)/components/libraries/gpiote;$(SDK)/components/libraries/hardfault;$(SDK)/components/libraries/hci;$(SDK)/components/libraries/led_softblink;$(SDK)/components/libraries/log;$(SDK)/components/libraries/log/src;$(SDK)/components/libraries/low_power_pwm;$(SDK)/components/libraries/mem_manager;$(SDK)/components/libraries/pwm;$(SDK)/components/libraries/queue;$(SDK)/components/libraries/scheduler;$(SDK)/components/libraries/sensorsim;$(SDK)/components/libraries/slip;$(SDK)/components/libraries/timer;$(SDK)/components/libraries/twi;$(SDK)/components/libraries/uart;$(SDK)/components/libraries/usbd;$(SDK)/components/libraries/usbd/class/audio;$(SDK)/components/libraries/usbd/class/cdc;$(SDK)/components/libraries/usbd/class/cdc/acm;$(SDK)/components/libraries/usbd/class/hid;$(SDK)/components/libraries/usbd/class/hid/generic;$(SDK)/components/libraries/usbd/class/hid/kbd;$(SDK)/components/libraries/usbd/class/hid/mouse;$(SDK)/components/libraries/usbd/class/msc;$(SDK)/components/libraries/usbd/config;$(SDK)/components/libraries/util;$(SDK)/components/softdevice/common/softdevice_handler;$(SDK)/components/softdevice/s130/headers;$(SDK)/components/softdevice/s130/headers/nrf51;$(SDK)/components/toolchain;$(SDK)/external/segger_rtt"
+      debug_register_definition_file="$(ProjectDir)/nrf51_Registers.xml"
+      debug_start_from_entry_point_symbol="No"
+      debug_target_connection="J-Link"
+      gcc_entry_point="reset_handler"
+      linker_memory_map_file="$(ProjectDir)/MemoryMap_ARM.xml"
+      linker_section_placement_file="$(ProjectDir)/flash_placement.xml"
+      macros="DeviceHeaderFile=$(PackagesDir)/nRF/CMSIS/Device/Include/nrf.h;DeviceLibraryIdentifier=M0l;DeviceSystemFile=$(PackagesDir)/nRF/CMSIS/Device/Source/system_nrf51.c;DeviceVectorsFile=$(PackagesDir)/nRF/Source/ses_nrf51_Vectors.s;DeviceFamily=nRF;Target=nRF51822_xxAA;Placement=Flash;SDK=../nRF_SDK/nRF5_SDK_12.3.0"
+      project_directory=""
+      project_type="Executable"
+      target_reset_script="Reset();"
+      target_script_file="$(ProjectDir)/nRF_Target.js"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <file file_name="$(ProjectDir)/main.c" />
+      <file file_name="$(ProjectDir)/sdk_config.h" />
+    </folder>
+    <folder Name="System Files">
+      <file file_name="$(ProjectDir)/flash_placement.xml" />
+    </folder>
+    <folder Name="Internal Files">
+      <file file_name="$(ProjectDir)/thumb_crt0.s" />
+      <file file_name="$(ProjectDir)/ses_nrf51_startup.s" />
+      <file file_name="$(SDK)/components/toolchain/system_nrf51.c" />
+    </folder>
+    <folder Name="RTT Files">
+      <file file_name="$(ProjectDir)/SES/SEGGER_RTT.c" />
+      <file file_name="$(ProjectDir)/SES/SEGGER_RTT.h" />
+      <file file_name="$(ProjectDir)/SES/SEGGER_RTT_Conf.h" />
+      <file file_name="$(ProjectDir)/SES/SEGGER_RTT_SES.c" />
+    </folder>
+    <folder Name="Script Files">
+      <file file_name="$(ProjectDir)/nRF/Scripts/nRF_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+    </folder>
+    <folder Name="Board Definition">
+      <file file_name="$(SDK)/components/boards/boards.c" />
+    </folder>
+    <folder Name="Board Support">
+      <file file_name="$(SDK)/components/libraries/bsp/bsp.c" />
+      <file file_name="$(SDK)/components/libraries/bsp/bsp_btn_ble.c" />
+      <file file_name="$(SDK)/components/libraries/bsp/bsp_nfc.c" />
+    </folder>
+    <folder Name="nRF_BLE">
+      <file file_name="$(SDK)/components/ble/common/ble_advdata.c" />
+      <file file_name="$(SDK)/components/ble/ble_advertising/ble_advertising.c" />
+      <file file_name="$(SDK)/components/ble/common/ble_conn_params.c" />
+      <file file_name="$(SDK)/components/ble/common/ble_conn_state.c" />
+      <file file_name="$(SDK)/components/ble/common/ble_srv_common.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/gatt_cache_manager.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/gatts_cache_manager.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/id_manager.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/peer_data.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/peer_data_storage.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/peer_database.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/peer_id.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/peer_manager.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/pm_buffer.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/pm_mutex.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/security_dispatcher.c" />
+      <file file_name="$(SDK)/components/ble/peer_manager/security_manager.c" />
+    </folder>
+    <folder Name="nRF_BLE_Services">
+      <file file_name="$(SDK)/components/ble/ble_services/ble_bas/ble_bas.c" />
+      <file file_name="$(SDK)/components/ble/ble_services/ble_dis/ble_dis.c" />
+      <file file_name="$(SDK)/components/ble/ble_services/ble_hids/ble_hids.c" />
+    </folder>
+    <folder Name="nRF_Drivers">
+      <file file_name="$(SDK)/components/drivers_nrf/clock/nrf_drv_clock.c" />
+      <file file_name="$(SDK)/components/drivers_nrf/common/nrf_drv_common.c" />
+      <file file_name="$(SDK)/components/drivers_nrf/gpiote/nrf_drv_gpiote.c" />
+      <file file_name="$(SDK)/components/drivers_nrf/uart/nrf_drv_uart.c" />
+    </folder>
+    <folder Name="nRF_Libraries">
+      <file file_name="$(SDK)/components/libraries/button/app_button.c" />
+      <file file_name="$(SDK)/components/libraries/util/app_error.c" />
+      <file file_name="$(SDK)/components/libraries/util/app_error_weak.c" />
+      <file file_name="$(SDK)/components/libraries/scheduler/app_scheduler.c" />
+      <file file_name="$(SDK)/components/libraries/timer/app_timer.c" />
+      <file file_name="$(SDK)/components/libraries/timer/app_timer_appsh.c" />
+      <file file_name="$(SDK)/components/libraries/util/app_util_platform.c" />
+      <file file_name="$(SDK)/components/libraries/crc16/crc16.c" />
+      <file file_name="$(SDK)/components/libraries/fds/fds.c" />
+      <file file_name="$(SDK)/components/libraries/fstorage/fstorage.c" />
+      <file file_name="$(SDK)/components/libraries/hardfault/hardfault_implementation.c" />
+      <file file_name="$(SDK)/components/libraries/util/nrf_assert.c" />
+      <file file_name="$(SDK)/components/libraries/util/sdk_errors.c" />
+      <file file_name="$(SDK)/components/libraries/util/sdk_mapped_flags.c" />
+      <file file_name="$(SDK)/components/libraries/sensorsim/sensorsim.c" />
+    </folder>
+    <folder Name="nRF_Log">
+      <file file_name="$(SDK)/components/libraries/log/src/nrf_log_backend_serial.c" />
+      <file file_name="$(SDK)/components/libraries/log/src/nrf_log_frontend.c" />
+    </folder>
+    <folder Name="nRF_SoftDevice">
+      <file file_name="$(SDK)/components/softdevice/common/softdevice_handler/softdevice_handler.c" />
+      <file file_name="$(SDK)/components/softdevice/common/softdevice_handler/softdevice_handler_appsh.c" />
+    </folder>
+    <configuration
+      Name="Debug"
+      debug_additional_load_file="$(SDK)/components/softdevice/s130/hex/s130_nrf51_2.0.1_softdevice.hex"
+      debug_start_from_entry_point_symbol="No"
+      gcc_entry_point="reset_handler"
+      link_use_linker_script_file="No"
+      linker_section_placement_file="$(ProjectDir)/flash_placement.xml"
+      linker_section_placement_macros="FLASH_START=0x1B000;FLASH_SIZE=0x25000;SRAM_START=0x20001FE8;SRAM_SIZE=0x2018" />
+  </project>
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="None"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 1" />
+</solution>
